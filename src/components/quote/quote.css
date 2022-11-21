@@ -1,0 +1,27 @@
+.quote__container {
+  display: grid;
+  max-width: 600px;
+  height: 150px;
+  grid-template-areas:
+    "text refrech"
+    "author author";
+  margin-left: 10rem;
+  margin-top: 5rem;
+}
+
+.quote-text {
+  color: red;
+  grid-area: text;
+}
+
+.quote-btn {
+  height: 32px;
+  outline: 0;
+  border: 0;
+
+  grid-area: refrech;
+}
+
+.quote-author {
+  grid-area: author;
+}
