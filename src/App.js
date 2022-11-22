@@ -41,11 +41,13 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <>
       <div className="background"></div>
-      <Quote />
-      <Clock date={date} greeting={greeting} />
-    </div>
+      <div className="container">
+        <Quote />
+        <Clock date={date} greeting={greeting} />
+      </div>
+    </>
   );
 }
 

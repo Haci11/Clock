@@ -3,6 +3,7 @@ import Sun from "../../assets/desktop/icon-sun.svg";
 import Moon from "../../assets/desktop/icon-moon.svg";
 import Arrow from "../../assets/desktop/icon-arrow-down.svg";
 import axios from "axios";
+import "./clock.css";
 
 function Clock({ date, greeting }) {
   const [locations, setLocations] = useState({});
@@ -29,18 +30,20 @@ function Clock({ date, greeting }) {
   }, []);
 
   return (
-    <div>
-      <div>{greeting}</div>
-      <p>{date.hours}:</p>
-      <p>{date.minutes}</p>
-      <span>{date.abbreviation}</span>
-      <div>
-        In {locations.city}, {locations.country_code}{" "}
+    <div className="clock-container">
+      <div className="clock-greeting">{greeting} , it's currtently</div>
+      <div className="clock-times">
+        <p className="clock-time">{date.hours}:</p>
+        <p className="clock-time">{date.minutes}</p>
+        <span className="clock-abbreviation">{date.abbreviation}</span>
       </div>
-      <button>
-        <span>more</span>
-        <img src={Arrow} />
-      </button>
+      <div className="clock-city">
+        In {locations.city} Stockholm, {locations.country_code}SE
+        <button className="clock-btn">
+          <span className="btn-text">more</span>
+          <img className="btn-arrow" src={Arrow} />
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,64 @@
+.clock-container {
+  display: grid;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 20rem;
+}
+.clock-times {
+  display: flex;
+  align-items: flex-end;
+}
+
+.clock-btn {
+  display: flex;
+  width: 146px;
+  height: 56px;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 28px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.btn-arrow {
+  background: #303030;
+  border-radius: 50%;
+  height: 16px;
+  padding: 12px;
+}
+
+.clock-greeting {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.clock-time {
+  font-weight: 700;
+  font-size: 200px;
+  line-height: 200px;
+}
+
+.clock-abbreviation {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 130px;
+}
+
+.clock-city {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
