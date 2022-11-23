@@ -10,6 +10,7 @@
 }
 
 .clock-btn {
+  cursor: pointer;
   display: flex;
   width: 146px;
   height: 56px;

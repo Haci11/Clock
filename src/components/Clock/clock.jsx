@@ -5,7 +5,7 @@ import Arrow from "../../assets/desktop/icon-arrow-down.svg";
 import axios from "axios";
 import "./clock.css";
 
-function Clock({ date, greeting }) {
+function Clock({ date, greeting, day }) {
   const [locations, setLocations] = useState({});
 
   const getLocation = async () => {
@@ -31,7 +31,10 @@ function Clock({ date, greeting }) {
 
   return (
     <div className="clock-container">
-      <div className="clock-greeting">{greeting} , it's currtently</div>
+      <div className="clock-greeting">
+        {day ? <img src={Sun} alt="sun" /> : <img src={Moon} alt="moon" />}
+        {greeting} , it's currtently
+      </div>
       <div className="clock-times">
         <p className="clock-time">{date.hours}:</p>
         <p className="clock-time">{date.minutes}</p>
