@@ -2,6 +2,8 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Quote from "./components/quote/quote";
 import Clock from "./components/Clock/clock";
+import InfoClock from "./components/InfoClock/infoclock";
+
 import axios from "axios";
 
 function App() {
@@ -11,6 +13,10 @@ function App() {
 
   useEffect(() => {
     getTime();
+    const updateTimer = setInterval(() => {
+      getTime();
+    }, 30000);
+    return () => clearInterval(updateTimer);
   }, []);
 
   const getTime = async () => {
@@ -22,7 +28,7 @@ function App() {
       minutes: ("0" + current_date.getMinutes()).slice(-2),
       abbreviation: data.abbreviation,
       timezone: data.timezone,
-      dayOfyear: data.day_of_year,
+      dayOfYear: data.day_of_year,
       dayOfWeek: data.day_of_week,
       week: data.week_number,
     };
@@ -51,6 +57,7 @@ function App() {
         <Quote />
         <Clock date={date} greeting={greeting} day={timeOfDay} />
       </div>
+      <InfoClock date={date} day={timeOfDay} />
     </>
   );
 }
