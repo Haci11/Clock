@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 .container {
   display: flex;
@@ -27,6 +28,7 @@
 
 .night {
   background-image: url("./assets/desktop/bg-image-nighttime.jpg");
+  background-size: 101%;
 }
 
 .background::before {

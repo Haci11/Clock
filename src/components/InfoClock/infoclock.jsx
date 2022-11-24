@@ -1,10 +1,10 @@
 import React from "react";
 import "./infoclock.css";
 
-const Infoclock = ({ date, day }) => {
+const Infoclock = ({ date, day, show }) => {
   let backgroundDayOrNight = day ? "daybg" : "nightbg";
   return (
-    <div className={`infoclock-container ${backgroundDayOrNight}`}>
+    <div className={`infoclock-container ${backgroundDayOrNight} ${show}`}>
       <div>
         <h4 className="clockinfo-title">Current timezone</h4>
         <p className="clockingo-text">{date.timezone}</p>

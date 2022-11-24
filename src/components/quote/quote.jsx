@@ -3,7 +3,7 @@ import axios from "axios";
 import Refresh from "../../assets/desktop/icon-refresh.svg";
 import "./quote.css";
 
-const Quote = () => {
+const Quote = ({ show }) => {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState("");
 
@@ -22,8 +22,10 @@ const Quote = () => {
   function fetch() {
     quoteInfo();
   }
+
+  let Disable = show ? "disable" : "";
   return (
-    <div className="quote__container">
+    <div className={`quote__container ${Disable}`}>
       <p className="quote-text">{quote}</p>
       <p className="quote-author">{author}</p>
       <button onClick={fetch} className="quote-btn">

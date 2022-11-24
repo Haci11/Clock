@@ -5,7 +5,7 @@ import Arrow from "../../assets/desktop/icon-arrow-down.svg";
 import axios from "axios";
 import "./clock.css";
 
-function Clock({ date, greeting, day }) {
+function Clock({ date, greeting, day, show, setShow }) {
   const [locations, setLocations] = useState({});
 
   const getLocation = async () => {
@@ -29,10 +29,18 @@ function Clock({ date, greeting, day }) {
     getLocation();
   }, []);
 
+  function showToggle() {
+    setShow(!show ? "--active" : "");
+  }
+
   return (
     <div className="clock-container">
       <div className="clock-greeting">
-        {day ? <img src={Sun} alt="sun" /> : <img src={Moon} alt="moon" />}
+        {day ? (
+          <img src={Sun} className="clock-icon" alt="sun" />
+        ) : (
+          <img src={Moon} className="clock-icon" alt="moon" />
+        )}
         {greeting} , it's currtently
       </div>
       <div className="clock-times">
@@ -42,8 +50,8 @@ function Clock({ date, greeting, day }) {
       </div>
       <div className="clock-city">
         In {locations.city} Stockholm, {locations.country_code}SE
-        <button className="clock-btn">
-          <span className="btn-text">more</span>
+        <button className="clock-btn" onClick={showToggle}>
+          <span className="btn-text">{show ? "less" : "more"}</span>
           <img className="btn-arrow" src={Arrow} />
         </button>
       </div>

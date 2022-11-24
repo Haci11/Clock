@@ -1,10 +1,17 @@
 .infoclock-container {
-  display: grid;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: none;
   grid-template-columns: 1fr 1fr;
   row-gap: 5rem;
   column-gap: 20rem;
   color: #303030;
   padding: 120px 64px;
+}
+
+.--active {
+  display: grid;
 }
 
 .daybg {

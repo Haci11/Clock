@@ -2,11 +2,16 @@
   display: grid;
   flex-direction: column;
   color: #fff;
-  margin-top: 20rem;
+  margin-bottom: 3rem;
 }
 .clock-times {
   display: flex;
   align-items: flex-end;
+}
+
+.clock-icon {
+  padding-right: 1rem;
+  width: 20px;
 }
 
 .clock-btn {

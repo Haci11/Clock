@@ -1,11 +1,12 @@
 .quote__container {
   display: grid;
   width: 573px;
-  height: 125px;
+  height: 150px;
   grid-template-areas:
     "text refrech"
     "author author";
   color: #fff;
+  margin-bottom: 20rem;
 }
 
 .quote-text {
@@ -23,6 +24,10 @@
   border: 0;
   background: none;
   grid-area: refrech;
+}
+.disable {
+  display: none;
+  margin-bottom: 0;
 }
 
 .quote-author {

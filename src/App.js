@@ -10,6 +10,7 @@ function App() {
   const [date, setDate] = useState({});
   const [greeting, setGreeting] = useState("");
   const [timeOfDay, setTimeOfDay] = useState();
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     getTime();
@@ -54,10 +55,16 @@ function App() {
     <>
       <div className={`background ${backgroundDayOrNight}`}></div>
       <div className="container">
-        <Quote />
-        <Clock date={date} greeting={greeting} day={timeOfDay} />
+        <Quote show={show} setShow={setShow} />
+        <Clock
+          date={date}
+          greeting={greeting}
+          day={timeOfDay}
+          show={show}
+          setShow={setShow}
+        />
       </div>
-      <InfoClock date={date} day={timeOfDay} />
+      <InfoClock date={date} day={timeOfDay} show={show} setShow={setShow} />
     </>
   );
 }
