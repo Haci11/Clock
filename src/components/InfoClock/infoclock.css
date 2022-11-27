@@ -39,3 +39,16 @@
   font-size: 56px;
   line-height: 68px;
 }
+
+@media only screen and (max-width: 768px) {
+  .infoclock-container {
+    row-gap: 3rem;
+    column-gap: 10rem;
+  }
+  .clockinfo-title {
+    font-size: 13px;
+  }
+  .clockingo-text {
+    font-size: 40px;
+  }
+}

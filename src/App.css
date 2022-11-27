@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 7rem 7rem 0rem 7rem;
+  padding: 5rem 7rem 1rem 7rem;
 }
 
 .background {
@@ -28,7 +28,6 @@
 
 .night {
   background-image: url("./assets/desktop/bg-image-nighttime.jpg");
-  background-size: 101%;
 }
 
 .background::before {
@@ -40,4 +39,9 @@
   right: 0;
   top: 0;
   z-index: 1;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 3rem 3rem 0rem 3rem;
+  }
 }
