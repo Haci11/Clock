@@ -7,7 +7,6 @@
   row-gap: 5rem;
   column-gap: 20rem;
   color: #303030;
-  padding: 120px 64px;
 }
 
 .--active {
@@ -30,7 +29,7 @@
   line-height: 28px;
   letter-spacing: 3px;
   text-transform: uppercase;
-
+  padding-left: 1rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -38,17 +37,40 @@
   font-weight: 700;
   font-size: 56px;
   line-height: 68px;
+  padding-left: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
   .infoclock-container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
     row-gap: 3rem;
-    column-gap: 10rem;
+    column-gap: 1rem;
   }
   .clockinfo-title {
     font-size: 13px;
   }
   .clockingo-text {
-    font-size: 40px;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .infoclock-container {
+    grid-template-columns: 1fr;
+    row-gap: 0rem;
+    column-gap: 0rem;
+    padding: 0rem;
+    overflow: hidden;
+    padding-top: 1rem;
+  }
+  .clockinfo-title {
+    font-size: 10px;
+    padding-left: 1rem;
+  }
+  .clockingo-text {
+    font-size: 20px;
+    padding-left: 1rem;
   }
 }

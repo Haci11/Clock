@@ -1,7 +1,7 @@
 .quote__container {
   display: grid;
-  width: 573px;
-  height: 150px;
+  max-width: 573px;
+  min-height: 150px;
   grid-template-areas:
     "text refrech"
     "author author";
@@ -35,4 +35,10 @@
   font-size: 18px;
   line-height: 28px;
   grid-area: author;
+}
+
+@media only screen and (max-width: 768px) {
+  .quote__container {
+    margin-bottom: 18rem;
+  }
 }

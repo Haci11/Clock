@@ -22,6 +22,7 @@
   padding: 0.5rem;
   text-align: center;
   border-radius: 28px;
+  border: 0;
   align-items: center;
   justify-content: space-around;
 }
@@ -73,5 +74,25 @@
 @media only screen and (max-width: 768px) {
   .clock-time {
     font-size: 175px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .clock-container {
+    margin-top: 3rem;
+  }
+  .clock-time {
+    font-size: 70px;
+    line-height: 100px;
+  }
+  .clock-abbreviation {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 60px;
+  }
+  .clock-city {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
   }
 }
